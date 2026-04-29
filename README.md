@@ -1,2 +1,0 @@
-# PraksisProsjekt
-nettside for praksisprosjekt 
