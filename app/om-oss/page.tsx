@@ -6,15 +6,15 @@ import { Linkedin } from "lucide-react"
 const teamMembers = [
   {
     name: "Kristian Espevik",
-    role: "Gruppeleder & Prosjektansvarlig",
+    role: "Gruppeleder",
     linkedin: "https://www.linkedin.com/in/kristian-espevik-074435220/",
-    bio: "Kristian er ansvarlig for prosjektledelse og koordinering mellom teamet og praksispartneren. Han har erfaring med systemutvikling og er spesielt interessert i backend-utvikling og databasedesign.",
+    bio: "Kristian er gruppeleder og vil være ansvarlig for prosjektledelse og koordinering. Han har erfaring med systemutvikling og er spesielt interessert i backend-utvikling og databasedesign.",
     initials: "KE",
     image: "/images/kristian.png",
   },
   {
     name: "Brage Kristoffersen",
-    role: "Frontend-utvikler",
+    role: "Utvikler",
     linkedin: "https://www.linkedin.com/in/brage-kristoffersen-a0b9ba289/",
     bio: "Brage fokuserer på brukergrensesnitt og brukeropplevelse. Han har kompetanse innen moderne webutvikling med React og TypeScript, og brenner for å lage intuitive og tilgjengelige løsninger.",
     initials: "BK",
@@ -22,9 +22,9 @@ const teamMembers = [
   },
   {
     name: "Victor Ziadpour",
-    role: "Backend-utvikler",
+    role: "Utvikler",
     linkedin: "https://www.linkedin.com/in/victor-ziadpour-8a7a29345/",
-    bio: "Victor jobber med serverside-logikk og API-utvikling. Han har god forståelse for systemarkitektur og er interessert i skyløsninger og DevOps-praksis.",
+    bio: "Victor har god forståelse for systemarkitektur og er interessert i skyløsninger og DevOps-praksis. Han ser frem til å jobbe med serverside-logikk og API-utvikling.",
     initials: "VZ",
     image: "/images/victor.png",
   },
@@ -38,8 +38,8 @@ export default function OmOssPage() {
         <div className="mx-auto max-w-2xl text-center mb-16">
           <h1 className="text-4xl font-bold text-foreground mb-4">Om oss</h1>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            Vi er TechTrio - tre IT-studenter fra Universitetet i Agder som sammen jobber med 
-            praksisprosjektet vårt våren 2026. Her kan du bli bedre kjent med teamet.
+            Vi er TechTrio - tre IT-studenter fra Universitetet i Agder som er klare for 
+            vårt IS-302 praksisprosjekt høsten 2026. Her kan du bli bedre kjent med teamet.
           </p>
         </div>
 
@@ -101,19 +101,19 @@ export default function OmOssPage() {
               </h2>
               <div className="prose prose-sm text-muted-foreground">
                 <p className="mb-4 leading-relaxed">
-                  TechTrio ble dannet i starten av vårsemesteret 2026 som en del av emnet IS-302 
-                  Praksisprosjekt ved Universitetet i Agder. Vi er tre studenter med komplementære 
-                  ferdigheter og en felles interesse for teknologi og innovasjon.
+                  TechTrio ble dannet som en del av emnet IS-302 Praksisprosjekt ved Universitetet 
+                  i Agder. Vi er tre studenter med komplementære ferdigheter og en felles interesse 
+                  for teknologi og innovasjon.
                 </p>
                 <p className="mb-4 leading-relaxed">
-                  Vår tilnærming til prosjektarbeid er basert på smidig metodikk, hvor vi jobber 
-                  i korte iterasjoner med jevnlig tilbakemelding fra både veileder og praksispartner. 
-                  Vi tror på åpen kommunikasjon, kunnskapsdeling og kontinuerlig forbedring.
+                  Vår tilnærming til prosjektarbeid vil være basert på smidig metodikk, hvor vi 
+                  planlegger å jobbe i korte iterasjoner med jevnlig tilbakemelding. Vi tror på 
+                  åpen kommunikasjon, kunnskapsdeling og kontinuerlig forbedring.
                 </p>
                 <p className="leading-relaxed">
-                  Gjennom dette praksisprosjektet ønsker vi å anvende teoretisk kunnskap fra studiet 
-                  i en praktisk setting, samtidig som vi bygger verdifulle relasjoner med næringslivet 
-                  og forbereder oss på arbeidslivet etter endt utdanning.
+                  Vi ser frem til å anvende teoretisk kunnskap fra studiet i en praktisk setting, 
+                  samtidig som vi bygger verdifulle relasjoner med næringslivet og forbereder oss 
+                  på arbeidslivet etter endt utdanning.
                 </p>
               </div>
             </CardContent>

@@ -12,25 +12,20 @@ export default function HomePage() {
         <div className="container relative mx-auto px-4">
           <div className="mx-auto max-w-3xl text-center">
             <div className="mb-6 inline-flex items-center rounded-full bg-accent/20 px-4 py-1.5 text-sm font-medium text-primary-foreground">
-              IS-302 Praksisprosjekt | Vår 2026
+              IS-302 Praksisprosjekt | Høst 2026
             </div>
             <h1 className="mb-6 text-4xl font-bold tracking-tight text-primary-foreground sm:text-5xl lg:text-6xl text-balance">
-              Velkommen til TechTrio
+              Vi er TechTrio
             </h1>
             <p className="mb-8 text-lg text-primary-foreground/80 leading-relaxed text-pretty">
-              Vi er tre studenter fra Universitetet i Agder som dokumenterer vårt praksisprosjekt 
-              i samarbeid med en lokal IT-bedrift. Følg vår reise gjennom vårsemesteret 2026.
+              Tre studenter fra Universitetet i Agder som er klare for vårt IS-302 praksisprosjekt 
+              høsten 2026. Vi ser frem til å anvende vår kunnskap i praksis og samarbeide med næringslivet.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" variant="secondary" className="font-medium">
                 <Link href="/om-oss">
                   Møt teamet
                   <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
-              <Button asChild size="lg" variant="outline" className="font-medium bg-transparent border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground">
-                <Link href="/oppgavebeskrivelse">
-                  Les om prosjektet
                 </Link>
               </Button>
             </div>
@@ -42,11 +37,11 @@ export default function HomePage() {
       <section className="py-16 lg:py-24">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-2xl text-center mb-12">
-            <h2 className="text-3xl font-bold text-foreground mb-4">Om prosjektet</h2>
+            <h2 className="text-3xl font-bold text-foreground mb-4">Om oss</h2>
             <p className="text-muted-foreground leading-relaxed">
               IS-302 Praksisprosjekt er et emne ved Universitetet i Agder hvor studenter får praktisk 
-              erfaring gjennom samarbeid med næringslivet. Vårt prosjekt fokuserer på utvikling av 
-              moderne IT-løsninger i samarbeid med vår praksispartner.
+              erfaring gjennom samarbeid med næringslivet. Vi gleder oss til å ta fatt på denne 
+              spennende utfordringen.
             </p>
           </div>
 
@@ -58,7 +53,7 @@ export default function HomePage() {
                 </div>
                 <h3 className="mb-2 text-lg font-semibold text-card-foreground">Teamet vårt</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  Tre engasjerte IT-studenter med ulik bakgrunn og kompetanse som jobber sammen mot felles mål.
+                  Tre engasjerte IT-studenter med ulik bakgrunn og kompetanse, klare til å jobbe sammen mot felles mål.
                 </p>
               </CardContent>
             </Card>
@@ -70,7 +65,7 @@ export default function HomePage() {
                 </div>
                 <h3 className="mb-2 text-lg font-semibold text-card-foreground">Læringsmål</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  Praktisk erfaring med prosjektarbeid, samarbeid med bedrifter og anvendelse av akademisk kunnskap.
+                  Vi ønsker å få praktisk erfaring med prosjektarbeid, samarbeid med bedrifter og anvendelse av akademisk kunnskap.
                 </p>
               </CardContent>
             </Card>
@@ -82,7 +77,7 @@ export default function HomePage() {
                 </div>
                 <h3 className="mb-2 text-lg font-semibold text-card-foreground">Tidsramme</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  Prosjektet gjennomføres i løpet av vårsemesteret 2026, med jevnlige statusoppdateringer.
+                  Prosjektet vil gjennomføres i løpet av høstsemesteret 2026, med jevnlige statusoppdateringer.
                 </p>
               </CardContent>
             </Card>
@@ -125,27 +120,6 @@ export default function HomePage() {
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-16 lg:py-24">
-        <div className="container mx-auto px-4">
-          <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-3xl font-bold text-foreground mb-4">Følg vår progresjon</h2>
-            <p className="text-muted-foreground mb-8">
-              Utforsk vår dagbok og statusoppdateringer for å følge med på hva vi jobber med 
-              gjennom semesteret.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild>
-                <Link href="/dagbok">Se dagbok</Link>
-              </Button>
-              <Button asChild variant="outline">
-                <Link href="/status-1">Les status 1</Link>
-              </Button>
-            </div>
           </div>
         </div>
       </section>
