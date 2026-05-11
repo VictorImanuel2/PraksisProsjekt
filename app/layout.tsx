@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
 export const metadata: Metadata = {
   title: 'IS-302 Praksisprosjekt | TechTrio - UiA',
-  description: 'Praksisprosjekt for IS-302 ved Universitetet i Agder. Dokumentasjon av IT-praksisprosjekt gjennomført av studentgruppen TechTrio våren 2026.',
+  description: 'Praksisprosjekt for IS-302 ved Universitetet i Agder. Presentasjon av studentgruppen TechTrio - klare for praksisprosjekt høsten 2026.',
   generator: 'v0.app',
   icons: {
     icon: [
