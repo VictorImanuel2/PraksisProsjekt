@@ -1,14 +1,15 @@
 import Image from "next/image"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { Linkedin } from "lucide-react"
+import { Linkedin, Github } from "lucide-react"
 
 const teamMembers = [
   {
     name: "Kristian Espevik",
     role: "Gruppeleder",
     linkedin: "https://www.linkedin.com/in/kristian-espevik-074435220/",
-    bio: "Kristian er gruppeleder og vil være ansvarlig for prosjektledelse og koordinering. Han har erfaring med systemutvikling og er spesielt interessert i backend-utvikling og databasedesign.",
+    github: "https://github.com/KristianEspevikUIA",
+    bio: "Kristian studerer IT og informasjonssystemer ved UiA (2024–). Han har erfaring med systemutvikling, databaser og IT-sikkerhet, og har blant annet utviklet et fullverdig hinderregistreringssystem for Kartverket i ASP.NET Core MVC med MariaDB og Docker. Han kombinerer teknisk presisjon med gode samarbeids- og kommunikasjonsevner, og motiveres av å bygge løsninger som faktisk fungerer i praksis.",
     initials: "KE",
     image: "/images/kristian.png",
   },
@@ -24,7 +25,8 @@ const teamMembers = [
     name: "Victor Ziadpour",
     role: "Utvikler",
     linkedin: "https://www.linkedin.com/in/victor-ziadpour-8a7a29345/",
-    bio: "Victor har god forståelse for systemarkitektur og er interessert i skyløsninger og DevOps-praksis. Han ser frem til å jobbe med serverside-logikk og API-utvikling.",
+    github: "https://github.com/VictorImanuel2",
+    bio: "Victor studerer IT og informasjonssystemer ved UiA (2024–2027). Han har praktisk erfaring med full-stack utvikling gjennom egne prosjekter – blant annet en nettside for en lokal gull- og sølvhandel med sanntids prisintegrasjon, og et interaktivt beredskapskart for Kristiansand. Han har erfaring med React, TypeScript, Flask, ASP.NET og Supabase, og er spesielt interessert i backend-utvikling og API-integrasjoner.",
     initials: "VZ",
     image: "/images/victor.png",
   },
@@ -75,17 +77,32 @@ export default function OmOssPage() {
                   <p className="text-sm text-muted-foreground leading-relaxed mb-4">
                     {member.bio}
                   </p>
-                  <Button asChild variant="outline" size="sm" className="w-full">
-                    <a 
-                      href={member.linkedin} 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center gap-2"
-                    >
-                      <Linkedin className="h-4 w-4" />
-                      Se LinkedIn-profil
-                    </a>
-                  </Button>
+                  <div className="flex gap-2">
+                    <Button asChild variant="outline" size="sm" className="flex-1">
+                      <a 
+                        href={member.linkedin} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center gap-2"
+                      >
+                        <Linkedin className="h-4 w-4" />
+                        LinkedIn
+                      </a>
+                    </Button>
+                    {member.github && (
+                      <Button asChild variant="outline" size="sm" className="flex-1">
+                        <a 
+                          href={member.github} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center justify-center gap-2"
+                        >
+                          <Github className="h-4 w-4" />
+                          GitHub
+                        </a>
+                      </Button>
+                    )}
+                  </div>
                 </div>
               </CardContent>
             </Card>
