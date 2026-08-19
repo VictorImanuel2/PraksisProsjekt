@@ -1,6 +1,7 @@
 import Image from "next/image"
 import { PageHero } from "@/components/page-hero"
 import { teamMembers } from "@/lib/team"
+import { asset } from "@/lib/base-path"
 
 const linkStyles =
   "flex-1 border-2 border-brand-blue px-3 py-2.5 text-center font-display text-base font-bold uppercase tracking-[0.1em] text-brand-blue no-underline transition-colors hover:bg-brand-blue hover:text-white hover:no-underline"
@@ -23,7 +24,7 @@ export default function OmOssPage() {
               <div className="relative aspect-[4/3] overflow-hidden bg-brand-ink">
                 {member.image ? (
                   <Image
-                    src={member.image}
+                    src={asset(member.image)}
                     alt={`Bilde av ${member.name}`}
                     fill
                     sizes="(max-width: 768px) 100vw, 50vw"

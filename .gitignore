@@ -4,7 +4,6 @@ __v0_devtools.tsx
 __v0_jsx-dev-runtime.ts
 .snowflake/
 .v0-trash/
-.vercel/
 next.user-config.*
 
 # Environment variables
@@ -13,4 +12,5 @@ next.user-config.*
 # Common ignores
 node_modules
 .next/
+out/
 .DS_Store
