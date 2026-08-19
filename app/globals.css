@@ -4,79 +4,54 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: oklch(0.985 0 0);
-  --foreground: oklch(0.2 0.03 250);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.2 0.03 250);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.2 0.03 250);
-  --primary: oklch(0.25 0.05 250);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.95 0.01 250);
-  --secondary-foreground: oklch(0.25 0.05 250);
-  --muted: oklch(0.96 0.005 250);
-  --muted-foreground: oklch(0.45 0.02 250);
-  --accent: oklch(0.55 0.18 200);
-  --accent-foreground: oklch(0.985 0 0);
+  /* Start-paletten */
+  --brand-yellow: #f5ce00;
+  --brand-blue: #24479b;
+  --brand-ink: #111111;
+
+  --background: #faf9f5;
+  --foreground: #16244a;
+  --card: #ffffff;
+  --card-foreground: #16244a;
+  --popover: #ffffff;
+  --popover-foreground: #16244a;
+  --primary: #f5ce00;
+  --primary-foreground: #111111;
+  --secondary: #111111;
+  --secondary-foreground: #f5ce00;
+  --muted: #f1efe6;
+  --muted-foreground: #5a5f6b;
+  --accent: #24479b;
+  --accent-foreground: #ffffff;
   --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.577 0.245 27.325);
-  --border: oklch(0.9 0.01 250);
-  --input: oklch(0.9 0.01 250);
-  --ring: oklch(0.55 0.18 200);
-  --chart-1: oklch(0.55 0.18 200);
-  --chart-2: oklch(0.25 0.05 250);
-  --chart-3: oklch(0.65 0.15 200);
-  --chart-4: oklch(0.35 0.04 250);
-  --chart-5: oklch(0.75 0.12 200);
-  --radius: 0.625rem;
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.2 0.03 250);
-  --sidebar-primary: oklch(0.25 0.05 250);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.95 0.01 250);
-  --sidebar-accent-foreground: oklch(0.25 0.05 250);
-  --sidebar-border: oklch(0.9 0.01 250);
-  --sidebar-ring: oklch(0.55 0.18 200);
+  --destructive-foreground: #ffffff;
+  --border: #e6e3d8;
+  --input: #e6e3d8;
+  --ring: #24479b;
+  --chart-1: #24479b;
+  --chart-2: #f5ce00;
+  --chart-3: #111111;
+  --chart-4: #16244a;
+  --chart-5: #5a5f6b;
+  --radius: 0rem;
+  --sidebar: #faf9f5;
+  --sidebar-foreground: #16244a;
+  --sidebar-primary: #f5ce00;
+  --sidebar-primary-foreground: #111111;
+  --sidebar-accent: #111111;
+  --sidebar-accent-foreground: #f5ce00;
+  --sidebar-border: #e6e3d8;
+  --sidebar-ring: #24479b;
 }
 
-.dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.145 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.145 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.985 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.396 0.141 25.723);
-  --destructive-foreground: oklch(0.637 0.237 25.331);
-  --border: oklch(0.269 0 0);
-  --input: oklch(0.269 0 0);
-  --ring: oklch(0.439 0 0);
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(0.269 0 0);
-  --sidebar-ring: oklch(0.439 0 0);
-}
 
 @theme inline {
-  --font-sans: 'Geist', 'Geist Fallback';
-  --font-mono: 'Geist Mono', 'Geist Mono Fallback';
+  --font-sans: var(--font-barlow), 'Barlow', system-ui, sans-serif;
+  --font-display: var(--font-barlow-condensed), 'Barlow Condensed', system-ui, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+  --color-brand-yellow: var(--brand-yellow);
+  --color-brand-blue: var(--brand-blue);
+  --color-brand-ink: var(--brand-ink);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -122,4 +97,21 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+@layer base {
+  body {
+    -webkit-font-smoothing: antialiased;
+  }
+  a {
+    color: var(--brand-blue);
+  }
+}
+
+@utility diagonal-stripes {
+  background-image: repeating-linear-gradient(
+    115deg,
+    rgba(0, 0, 0, 0.05) 0 2px,
+    transparent 2px 46px
+  );
 }
