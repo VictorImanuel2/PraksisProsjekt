@@ -31,6 +31,14 @@ const teamMembers = [
     initials: "VZ",
     image: "/images/victor.png",
   },
+  {
+    name: "Taavi-Topias Henell",
+    role: "Utvikler",
+    linkedin: "https://www.linkedin.com/in/taavith/",
+    github: "https://github.com/HenellTT",
+    bio: "Taavi-Topias studerer IT og informasjonssystemer ved UiA (2024–2027). Han har en internasjonal bakgrunn med flytende norsk, engelsk og finsk. Han har tekniske ferdigheter innen HTML, CSS, JavaScript, C#, Python og SQL, og kombinerer strukturert arbeidserfaring med et voksende fokus på systemutvikling.",
+    initials: "TH",
+  },
 ]
 
 export default function OmOssPage() {
@@ -41,13 +49,13 @@ export default function OmOssPage() {
         <div className="mx-auto max-w-2xl text-center mb-16">
           <h1 className="text-4xl font-bold text-foreground mb-4">Om oss</h1>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            Vi er TechTrio - tre IT-studenter fra Universitetet i Agder som er klare for 
+            Vi er TechTrio - fire IT-studenter fra Universitetet i Agder som er klare for 
             vårt IS-302 praksisprosjekt høsten 2026. Her kan du bli bedre kjent med teamet.
           </p>
         </div>
 
         {/* Team Grid */}
-        <div className="grid gap-8 md:grid-cols-3 max-w-5xl mx-auto mb-16">
+        <div className="grid gap-8 md:grid-cols-2 max-w-5xl mx-auto mb-16">
           {teamMembers.map((member) => (
             <Card key={member.name} className="border-border bg-card overflow-hidden">
               <CardContent className="p-0">
@@ -120,7 +128,7 @@ export default function OmOssPage() {
               <div className="prose prose-sm text-muted-foreground">
                 <p className="mb-4 leading-relaxed">
                   TechTrio ble dannet som en del av emnet IS-302 Praksisprosjekt ved Universitetet 
-                  i Agder. Vi er tre studenter med komplementære ferdigheter og en felles interesse 
+                  i Agder. Vi er fire studenter med komplementære ferdigheter og en felles interesse 
                   for teknologi og innovasjon.
                 </p>
                 <p className="mb-4 leading-relaxed">

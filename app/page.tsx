@@ -18,7 +18,7 @@ export default function HomePage() {
               Vi er TechTrio
             </h1>
             <p className="mb-8 text-lg text-primary-foreground/80 leading-relaxed text-pretty">
-              Tre studenter fra Universitetet i Agder som er klare for vårt IS-302 praksisprosjekt 
+              Fire studenter fra Universitetet i Agder som er klare for vårt IS-302 praksisprosjekt 
               høsten 2026. Vi ser frem til å anvende vår kunnskap i praksis og samarbeide med næringslivet.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -53,7 +53,7 @@ export default function HomePage() {
                 </div>
                 <h3 className="mb-2 text-lg font-semibold text-card-foreground">Teamet vårt</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  Tre engasjerte IT-studenter med ulik bakgrunn og kompetanse, klare til å jobbe sammen mot felles mål.
+                  Fire engasjerte IT-studenter med ulik bakgrunn og kompetanse, klare til å jobbe sammen mot felles mål.
                 </p>
               </CardContent>
             </Card>
@@ -91,15 +91,16 @@ export default function HomePage() {
           <div className="mx-auto max-w-2xl text-center mb-12">
             <h2 className="text-3xl font-bold text-foreground mb-4">Gruppemedlemmer</h2>
             <p className="text-muted-foreground">
-              TechTrio består av tre studenter fra IT-studiet ved UiA.
+              TechTrio består av fire studenter fra IT-studiet ved UiA.
             </p>
           </div>
 
-          <div className="grid gap-8 sm:grid-cols-3 max-w-3xl mx-auto">
+          <div className="grid gap-8 sm:grid-cols-2 max-w-3xl mx-auto">
             {[
               { name: "Kristian Espevik", role: "Gruppeleder" },
               { name: "Brage Kristoffersen", role: "Utvikler" },
               { name: "Victor Ziadpour", role: "Utvikler" },
+              { name: "Taavi-Topias Henell", role: "Utvikler" },
             ].map((member) => (
               <div key={member.name} className="text-center">
                 <div className="mx-auto mb-4 h-20 w-20 rounded-full bg-primary flex items-center justify-center">
