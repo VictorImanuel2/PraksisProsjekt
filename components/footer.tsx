@@ -7,13 +7,13 @@ export function Footer() {
         <div className="flex flex-col items-center gap-4 text-center">
           <div className="flex items-center gap-2">
             <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary">
-              <span className="text-xs font-bold text-primary-foreground">TT</span>
+              <span className="text-xs font-bold text-primary-foreground">TS</span>
             </div>
-            <span className="font-semibold text-foreground">TechTrio</span>
+            <span className="font-semibold text-foreground">TechSquad</span>
           </div>
           <div className="flex flex-col gap-1 text-sm text-muted-foreground">
             <p>IS-302 Praksisprosjekt | Universitetet i Agder</p>
-            <p>&copy; 2026 TechTrio. Alle rettigheter reservert.</p>
+            <p>&copy; 2026 TechSquad. Alle rettigheter reservert.</p>
           </div>
           <div className="flex gap-4 text-sm">
             <Link href="/" className="text-muted-foreground hover:text-foreground transition-colors">

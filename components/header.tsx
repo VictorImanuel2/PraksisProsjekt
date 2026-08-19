@@ -26,10 +26,10 @@ export function Header() {
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         <Link href="/" className="flex items-center gap-2">
           <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary">
-            <span className="text-sm font-bold text-primary-foreground">TT</span>
+            <span className="text-sm font-bold text-primary-foreground">TS</span>
           </div>
           <div className="flex flex-col">
-            <span className="text-lg font-semibold text-foreground">TechTrio</span>
+            <span className="text-lg font-semibold text-foreground">TechSquad</span>
             <span className="text-xs text-muted-foreground">IS-302 Praksisprosjekt</span>
           </div>
         </Link>

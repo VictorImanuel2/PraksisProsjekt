@@ -8,8 +8,8 @@ import { Footer } from '@/components/footer'
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
 export const metadata: Metadata = {
-  title: 'IS-302 Praksisprosjekt | TechTrio - UiA',
-  description: 'Praksisprosjekt for IS-302 ved Universitetet i Agder. Presentasjon av studentgruppen TechTrio - klare for praksisprosjekt høsten 2026.',
+  title: 'TechSquad | IS-302 Praksisprosjekt',
+  description: 'Praksisprosjekt for IS-302 ved Universitetet i Agder. Presentasjon av studentgruppen TechSquad - klare for praksisprosjekt høsten 2026.',
   generator: 'v0.app',
   icons: {
     icon: [
