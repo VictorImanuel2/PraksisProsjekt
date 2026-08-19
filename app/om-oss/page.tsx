@@ -1,151 +1,112 @@
 import Image from "next/image"
-import { Card, CardContent } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { Linkedin, Github } from "lucide-react"
+import { PageHero } from "@/components/page-hero"
+import { teamMembers } from "@/lib/team"
 
-const teamMembers = [
-  {
-    name: "Kristian Espevik",
-    role: "Gruppeleder",
-    linkedin: "https://www.linkedin.com/in/kristian-espevik-074435220/",
-    github: "https://github.com/KristianEspevikUIA",
-    bio: "Kristian studerer IT og informasjonssystemer ved UiA (2024–). Han har erfaring med systemutvikling, databaser og IT-sikkerhet, og har blant annet utviklet et fullverdig hinderregistreringssystem for Kartverket i ASP.NET Core MVC med MariaDB og Docker. Han kombinerer teknisk presisjon med gode samarbeids- og kommunikasjonsevner, og motiveres av å bygge løsninger som faktisk fungerer i praksis.",
-    initials: "KE",
-    image: "/images/kristian.png",
-  },
-  {
-    name: "Brage Kristoffersen",
-    role: "Utvikler",
-    linkedin: "https://www.linkedin.com/in/brage-kristoffersen-a0b9ba289/",
-    github: "https://github.com/brege03",
-    bio: "Brage studerer IT og informasjonssystemer ved UiA (2024–). Han har en variert bakgrunn med erfaring fra Sjøforsvaret som vognfører på Haakonsvern, og jobber i dag som tilkallingsvikar ved Mandal fengsel. Han er vant til å ta ansvar, jobbe strukturert og fungere godt i team – egenskaper han tar med seg inn i IT-studiet og praksisprosjektet.",
-    initials: "BK",
-    image: "/images/brage.png",
-  },
-  {
-    name: "Victor Ziadpour",
-    role: "Utvikler",
-    linkedin: "https://www.linkedin.com/in/victor-ziadpour-8a7a29345/",
-    github: "https://github.com/VictorImanuel2",
-    bio: "Victor studerer IT og informasjonssystemer ved UiA (2024–2027). Han har praktisk erfaring med full-stack utvikling gjennom egne prosjekter – blant annet en nettside for en lokal gull- og sølvhandel med sanntids prisintegrasjon, og et interaktivt beredskapskart for Kristiansand. Han har erfaring med React, TypeScript, Flask, ASP.NET og Supabase, og er spesielt interessert i backend-utvikling og API-integrasjoner.",
-    initials: "VZ",
-    image: "/images/victor.png",
-  },
-  {
-    name: "Taavi-Topias Henell",
-    role: "Utvikler",
-    linkedin: "https://www.linkedin.com/in/taavith/",
-    github: "https://github.com/HenellTT",
-    bio: "Taavi-Topias studerer IT og informasjonssystemer ved UiA (2024–2027). Han har en internasjonal bakgrunn med flytende norsk, engelsk og finsk. Han har tekniske ferdigheter innen HTML, CSS, JavaScript, C#, Python og SQL, og kombinerer strukturert arbeidserfaring med et voksende fokus på systemutvikling.",
-    initials: "TH",
-  },
-]
+const linkStyles =
+  "flex-1 border-2 border-brand-blue px-3 py-2.5 text-center font-display text-base font-bold uppercase tracking-[0.1em] text-brand-blue no-underline transition-colors hover:bg-brand-blue hover:text-white hover:no-underline"
 
 export default function OmOssPage() {
   return (
-    <div className="py-12 lg:py-20">
-      <div className="container mx-auto px-4">
-        {/* Header */}
-        <div className="mx-auto max-w-2xl text-center mb-16">
-          <h1 className="text-4xl font-bold text-foreground mb-4">Om oss</h1>
-          <p className="text-lg text-muted-foreground leading-relaxed">
-            Vi er TechSquad - fire IT-studenter fra Universitetet i Agder som er klare for 
-            vårt IS-302 praksisprosjekt høsten 2026. Her kan du bli bedre kjent med teamet.
-          </p>
-        </div>
+    <div>
+      <PageHero
+        title="Om oss"
+        lead="Vi er TechSquad - fire IT-studenter fra Universitetet i Agder som er klare for vårt IS-302 praksisprosjekt høsten 2026. Her kan du bli bedre kjent med teamet."
+      />
 
-        {/* Team Grid */}
-        <div className="grid gap-8 md:grid-cols-2 max-w-5xl mx-auto mb-16">
+      <section className="px-5 pb-[76px] pt-[60px]">
+        <div className="mx-auto grid max-w-[1100px] grid-cols-[repeat(auto-fit,minmax(320px,1fr))] gap-6">
           {teamMembers.map((member) => (
-            <Card key={member.name} className="border-border bg-card overflow-hidden">
-              <CardContent className="p-0">
-                {/* Photo */}
-                <div className="aspect-square bg-primary flex items-center justify-center relative overflow-hidden">
-                  {member.image ? (
-                    <Image
-                      src={member.image}
-                      alt={`Bilde av ${member.name}`}
-                      fill
-                      className="object-cover"
-                    />
-                  ) : (
-                    <span className="text-6xl font-bold text-primary-foreground">
-                      {member.initials}
-                    </span>
-                  )}
-                </div>
-                
-                {/* Content */}
-                <div className="p-6">
-                  <h2 className="text-xl font-semibold text-card-foreground mb-1">
+            <article
+              key={member.name}
+              className="flex flex-col border border-border bg-card"
+            >
+              <div className="relative aspect-[4/3] overflow-hidden bg-brand-ink">
+                {member.image ? (
+                  <Image
+                    src={member.image}
+                    alt={`Bilde av ${member.name}`}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="object-cover"
+                  />
+                ) : (
+                  <div className="absolute inset-0 grid place-items-center font-display text-[72px] font-extrabold text-brand-yellow/90">
+                    {member.initials}
+                  </div>
+                )}
+              </div>
+
+              <div className="flex flex-1 flex-col gap-3.5 p-6">
+                <div>
+                  <h2 className="mb-1.5 font-display text-[28px] font-extrabold uppercase leading-none text-foreground">
                     {member.name}
                   </h2>
-                  <p className="text-sm font-medium text-accent mb-4">
+                  <p className="inline-block bg-brand-ink px-2.5 py-1 text-[11px] font-bold uppercase tracking-[0.14em] text-brand-yellow">
                     {member.role}
                   </p>
-                  <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-                    {member.bio}
-                  </p>
-                  <div className="flex gap-2">
-                    <Button asChild variant="outline" size="sm" className="flex-1">
-                      <a 
-                        href={member.linkedin} 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center justify-center gap-2"
-                      >
-                        <Linkedin className="h-4 w-4" />
-                        LinkedIn
-                      </a>
-                    </Button>
-                    {member.github && (
-                      <Button asChild variant="outline" size="sm" className="flex-1">
-                        <a 
-                          href={member.github} 
-                          target="_blank" 
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center justify-center gap-2"
-                        >
-                          <Github className="h-4 w-4" />
-                          GitHub
-                        </a>
-                      </Button>
-                    )}
-                  </div>
                 </div>
-              </CardContent>
-            </Card>
+
+                <p className="flex-1 text-[15px] leading-[1.7] text-muted-foreground text-pretty">
+                  {member.bio}
+                </p>
+
+                <div className="flex gap-2.5">
+                  <a
+                    href={member.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={linkStyles}
+                  >
+                    LinkedIn
+                  </a>
+                  {member.github && (
+                    <a
+                      href={member.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={linkStyles}
+                    >
+                      GitHub
+                    </a>
+                  )}
+                </div>
+              </div>
+            </article>
           ))}
         </div>
 
-        {/* About Group Section */}
-        <div className="max-w-3xl mx-auto">
-          <Card className="border-border bg-muted/30">
-            <CardContent className="p-8">
-              <h2 className="text-2xl font-bold text-card-foreground mb-4">
+        <div className="mx-auto mt-11 max-w-[1100px]">
+          <div className="relative overflow-hidden bg-brand-ink p-10">
+            <div
+              className="absolute -right-[60px] bottom-0 top-0 w-[40%] bg-brand-yellow opacity-[0.12]"
+              style={{ clipPath: "polygon(40% 0, 100% 0, 100% 100%, 0 100%)" }}
+            />
+            <div className="relative max-w-[760px]">
+              <div className="mb-[18px] h-[5px] w-[46px] bg-brand-blue" />
+              <h2 className="mb-[18px] font-display text-[34px] font-extrabold uppercase leading-none text-white">
                 Om gruppen vår
               </h2>
-              <div className="prose prose-sm text-muted-foreground">
-                <p className="mb-4 leading-relaxed">
-                  TechSquad ble dannet som en del av emnet IS-302 Praksisprosjekt ved Universitetet 
-                  i Agder. Vi er fire studenter med komplementære ferdigheter og en felles interesse 
-                  for teknologi og innovasjon.
-                </p>
-                <p className="mb-4 leading-relaxed">
-                  Vår tilnærming til prosjektarbeid vil være basert på smidig metodikk, hvor vi 
-                  planlegger å jobbe i korte iterasjoner med jevnlig tilbakemelding. Vi tror på 
-                  åpen kommunikasjon, kunnskapsdeling og kontinuerlig forbedring.
-                </p>
-                <p className="leading-relaxed">
-                  Vi ser frem til å anvende teoretisk kunnskap fra studiet i en praktisk setting, 
-                  samtidig som vi bygger verdifulle relasjoner med næringslivet og forbereder oss 
-                  på arbeidslivet etter endt utdanning.
-                </p>
-              </div>
-            </CardContent>
-          </Card>
+              <p className="mb-3.5 text-base leading-[1.75] text-white/[0.78] text-pretty">
+                TechSquad ble dannet som en del av emnet IS-302 Praksisprosjekt ved
+                Universitetet i Agder. Vi er fire studenter med komplementære
+                ferdigheter og en felles interesse for teknologi og innovasjon.
+              </p>
+              <p className="mb-3.5 text-base leading-[1.75] text-white/[0.78] text-pretty">
+                Vår tilnærming til prosjektarbeid vil være basert på smidig
+                metodikk, hvor vi planlegger å jobbe i korte iterasjoner med
+                jevnlig tilbakemelding. Vi tror på åpen kommunikasjon,
+                kunnskapsdeling og kontinuerlig forbedring.
+              </p>
+              <p className="text-base leading-[1.75] text-white/[0.78] text-pretty">
+                Vi ser frem til å anvende teoretisk kunnskap fra studiet i en
+                praktisk setting, samtidig som vi bygger verdifulle relasjoner med
+                næringslivet og forbereder oss på arbeidslivet etter endt
+                utdanning.
+              </p>
+            </div>
+          </div>
         </div>
-      </div>
+      </section>
     </div>
   )
 }

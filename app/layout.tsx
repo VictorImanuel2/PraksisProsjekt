@@ -1,11 +1,21 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Barlow, Barlow_Condensed } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
+const barlow = Barlow({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-barlow",
+})
+
+const barlowCondensed = Barlow_Condensed({
+  subsets: ["latin"],
+  weight: ["700", "800"],
+  variable: "--font-barlow-condensed",
+})
 
 export const metadata: Metadata = {
   title: 'TechSquad | IS-302 Praksisprosjekt',
@@ -37,7 +47,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="no" className="bg-background">
-      <body className={`${inter.variable} font-sans antialiased min-h-screen flex flex-col`}>
+      <body
+        className={`${barlow.variable} ${barlowCondensed.variable} font-sans antialiased min-h-screen flex flex-col bg-background text-foreground`}
+      >
         <Header />
         <main className="flex-1">
           {children}
