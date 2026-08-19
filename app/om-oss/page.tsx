@@ -49,7 +49,7 @@ export default function OmOssPage() {
         <div className="mx-auto max-w-2xl text-center mb-16">
           <h1 className="text-4xl font-bold text-foreground mb-4">Om oss</h1>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            Vi er TechTrio - fire IT-studenter fra Universitetet i Agder som er klare for 
+            Vi er TechSquad - fire IT-studenter fra Universitetet i Agder som er klare for 
             vårt IS-302 praksisprosjekt høsten 2026. Her kan du bli bedre kjent med teamet.
           </p>
         </div>
@@ -127,7 +127,7 @@ export default function OmOssPage() {
               </h2>
               <div className="prose prose-sm text-muted-foreground">
                 <p className="mb-4 leading-relaxed">
-                  TechTrio ble dannet som en del av emnet IS-302 Praksisprosjekt ved Universitetet 
+                  TechSquad ble dannet som en del av emnet IS-302 Praksisprosjekt ved Universitetet 
                   i Agder. Vi er fire studenter med komplementære ferdigheter og en felles interesse 
                   for teknologi og innovasjon.
                 </p>

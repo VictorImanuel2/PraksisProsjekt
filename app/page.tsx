@@ -15,7 +15,7 @@ export default function HomePage() {
               IS-302 Praksisprosjekt | Høst 2026
             </div>
             <h1 className="mb-6 text-4xl font-bold tracking-tight text-primary-foreground sm:text-5xl lg:text-6xl text-balance">
-              Vi er TechTrio
+              Vi er TechSquad
             </h1>
             <p className="mb-8 text-lg text-primary-foreground/80 leading-relaxed text-pretty">
               Fire studenter fra Universitetet i Agder som er klare for vårt IS-302 praksisprosjekt 
@@ -91,7 +91,7 @@ export default function HomePage() {
           <div className="mx-auto max-w-2xl text-center mb-12">
             <h2 className="text-3xl font-bold text-foreground mb-4">Gruppemedlemmer</h2>
             <p className="text-muted-foreground">
-              TechTrio består av fire studenter fra IT-studiet ved UiA.
+              TechSquad består av fire studenter fra IT-studiet ved UiA.
             </p>
           </div>
 
