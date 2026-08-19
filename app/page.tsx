@@ -1,126 +1,176 @@
+import Image from "next/image"
 import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { ArrowRight, Users, BookOpen, Calendar } from "lucide-react"
+import { teamMembers } from "@/lib/team"
+
+const stats = [
+  { value: "04", label: "Gruppemedlemmer" },
+  { value: "UiA", label: "Universitetet i Agder" },
+  { value: "H26", label: "Høstsemesteret" },
+]
+
+const highlights = [
+  {
+    number: "01",
+    title: "Teamet vårt",
+    text: "Fire engasjerte IT-studenter med ulik bakgrunn og kompetanse, klare til å jobbe sammen mot felles mål.",
+    accent: "border-t-brand-blue",
+  },
+  {
+    number: "02",
+    title: "Læringsmål",
+    text: "Vi ønsker å få praktisk erfaring med prosjektarbeid, samarbeid med bedrifter og anvendelse av akademisk kunnskap.",
+    accent: "border-t-brand-ink",
+  },
+  {
+    number: "03",
+    title: "Tidsramme",
+    text: "Prosjektet vil gjennomføres i løpet av høstsemesteret 2026, med jevnlige statusoppdateringer.",
+    accent: "border-t-brand-blue",
+  },
+]
 
 export default function HomePage() {
   return (
-    <div className="flex flex-col">
-      {/* Hero Section */}
-      <section className="relative overflow-hidden bg-primary py-20 lg:py-32">
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:4rem_4rem]" />
-        <div className="container relative mx-auto px-4">
-          <div className="mx-auto max-w-3xl text-center">
-            <div className="mb-6 inline-flex items-center rounded-full bg-accent/20 px-4 py-1.5 text-sm font-medium text-primary-foreground">
-              IS-302 Praksisprosjekt | Høst 2026
-            </div>
-            <h1 className="mb-6 text-4xl font-bold tracking-tight text-primary-foreground sm:text-5xl lg:text-6xl text-balance">
-              Vi er TechSquad
-            </h1>
-            <p className="mb-8 text-lg text-primary-foreground/80 leading-relaxed text-pretty">
-              Fire studenter fra Universitetet i Agder som er klare for vårt IS-302 praksisprosjekt 
-              høsten 2026. Vi ser frem til å anvende vår kunnskap i praksis og samarbeide med næringslivet.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" variant="secondary" className="font-medium">
-                <Link href="/om-oss">
-                  Møt teamet
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
-            </div>
-          </div>
+    <div>
+      {/* Hero */}
+      <section className="relative overflow-hidden bg-brand-yellow px-5 pb-24 pt-[84px]">
+        <div className="diagonal-stripes absolute inset-0" />
+        <div
+          className="absolute -right-20 bottom-0 top-0 w-[46%] bg-brand-ink opacity-[0.09]"
+          style={{ clipPath: "polygon(38% 0, 100% 0, 100% 100%, 0 100%)" }}
+        />
+        <div className="relative mx-auto flex max-w-[1180px] flex-col items-start gap-[26px]">
+          <p className="inline-flex items-center gap-2.5 bg-brand-ink px-3.5 py-[7px] text-xs font-bold uppercase tracking-[0.16em] text-brand-yellow">
+            IS-302 Praksisprosjekt <span className="opacity-50">|</span> Høst 2026
+          </p>
+          <h1 className="font-display text-[clamp(52px,9vw,116px)] font-extrabold uppercase leading-[0.92] tracking-[-0.01em] text-brand-ink text-balance">
+            Vi er <span className="text-brand-blue">TechSquad</span>
+          </h1>
+          <p className="max-w-[620px] text-[19px] leading-relaxed text-black/70 text-pretty">
+            Fire studenter fra Universitetet i Agder som er klare for vårt IS-302
+            praksisprosjekt høsten 2026. Vi ser frem til å anvende vår kunnskap i
+            praksis og samarbeide med næringslivet.
+          </p>
+          <Link
+            href="/om-oss"
+            className="inline-flex items-center gap-3 bg-brand-ink px-[26px] py-4 font-display text-[19px] font-bold uppercase tracking-[0.1em] text-brand-yellow no-underline transition-colors hover:bg-brand-blue hover:text-brand-yellow hover:no-underline"
+          >
+            Møt teamet <span className="text-base">→</span>
+          </Link>
         </div>
       </section>
 
-      {/* Info Section */}
-      <section className="py-16 lg:py-24">
-        <div className="container mx-auto px-4">
-          <div className="mx-auto max-w-2xl text-center mb-12">
-            <h2 className="text-3xl font-bold text-foreground mb-4">Om oss</h2>
-            <p className="text-muted-foreground leading-relaxed">
-              IS-302 Praksisprosjekt er et emne ved Universitetet i Agder hvor studenter får praktisk 
-              erfaring gjennom samarbeid med næringslivet. Vi gleder oss til å ta fatt på denne 
-              spennende utfordringen.
-            </p>
-          </div>
-
-          <div className="grid gap-6 md:grid-cols-3">
-            <Card className="border-border bg-card">
-              <CardContent className="pt-6">
-                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-accent/10">
-                  <Users className="h-6 w-6 text-accent" />
-                </div>
-                <h3 className="mb-2 text-lg font-semibold text-card-foreground">Teamet vårt</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  Fire engasjerte IT-studenter med ulik bakgrunn og kompetanse, klare til å jobbe sammen mot felles mål.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="border-border bg-card">
-              <CardContent className="pt-6">
-                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-accent/10">
-                  <BookOpen className="h-6 w-6 text-accent" />
-                </div>
-                <h3 className="mb-2 text-lg font-semibold text-card-foreground">Læringsmål</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  Vi ønsker å få praktisk erfaring med prosjektarbeid, samarbeid med bedrifter og anvendelse av akademisk kunnskap.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="border-border bg-card">
-              <CardContent className="pt-6">
-                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-accent/10">
-                  <Calendar className="h-6 w-6 text-accent" />
-                </div>
-                <h3 className="mb-2 text-lg font-semibold text-card-foreground">Tidsramme</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  Prosjektet vil gjennomføres i løpet av høstsemesteret 2026, med jevnlige statusoppdateringer.
-                </p>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Team Preview Section */}
-      <section className="bg-muted/30 py-16 lg:py-24">
-        <div className="container mx-auto px-4">
-          <div className="mx-auto max-w-2xl text-center mb-12">
-            <h2 className="text-3xl font-bold text-foreground mb-4">Gruppemedlemmer</h2>
-            <p className="text-muted-foreground">
-              TechSquad består av fire studenter fra IT-studiet ved UiA.
-            </p>
-          </div>
-
-          <div className="grid gap-8 sm:grid-cols-2 max-w-3xl mx-auto">
-            {[
-              { name: "Kristian Espevik", role: "Gruppeleder" },
-              { name: "Brage Kristoffersen", role: "Utvikler" },
-              { name: "Victor Ziadpour", role: "Utvikler" },
-              { name: "Taavi-Topias Henell", role: "Utvikler" },
-            ].map((member) => (
-              <div key={member.name} className="text-center">
-                <div className="mx-auto mb-4 h-20 w-20 rounded-full bg-primary flex items-center justify-center">
-                  <span className="text-2xl font-bold text-primary-foreground">
-                    {member.name.split(" ").map(n => n[0]).join("")}
-                  </span>
-                </div>
-                <h3 className="font-semibold text-foreground">{member.name}</h3>
-                <p className="text-sm text-muted-foreground">{member.role}</p>
+      {/* Nøkkeltall */}
+      <section className="bg-brand-ink">
+        <div className="mx-auto grid max-w-[1180px] grid-cols-[repeat(auto-fit,minmax(200px,1fr))]">
+          {stats.map((stat, index) => (
+            <div
+              key={stat.label}
+              className={
+                index < stats.length - 1
+                  ? "border-r border-white/10 px-5 py-[26px]"
+                  : "px-5 py-[26px]"
+              }
+            >
+              <div className="font-display text-[40px] font-extrabold leading-none text-brand-yellow">
+                {stat.value}
               </div>
+              <div className="mt-1 text-xs font-semibold uppercase tracking-[0.16em] text-white/60">
+                {stat.label}
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Om oss */}
+      <section className="px-5 py-[76px]">
+        <div className="mx-auto max-w-[1180px]">
+          <div className="mb-11 max-w-[660px]">
+            <div className="mb-[18px] h-[5px] w-[46px] bg-brand-blue" />
+            <h2 className="mb-3.5 font-display text-[clamp(32px,4.4vw,46px)] font-extrabold uppercase leading-none text-foreground">
+              Om oss
+            </h2>
+            <p className="text-[17px] leading-relaxed text-muted-foreground text-pretty">
+              IS-302 Praksisprosjekt er et emne ved Universitetet i Agder hvor
+              studenter får praktisk erfaring gjennom samarbeid med næringslivet.
+              Vi gleder oss til å ta fatt på denne spennende utfordringen.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-[repeat(auto-fit,minmax(260px,1fr))] gap-5">
+            {highlights.map((item) => (
+              <article
+                key={item.number}
+                className={`border border-t-[5px] border-border bg-card p-7 ${item.accent}`}
+              >
+                <div className="mb-2.5 text-[11px] font-bold uppercase tracking-[0.18em] text-brand-blue">
+                  {item.number}
+                </div>
+                <h3 className="mb-2.5 font-display text-[25px] font-bold uppercase leading-[1.05] text-foreground">
+                  {item.title}
+                </h3>
+                <p className="text-[15px] leading-relaxed text-muted-foreground">
+                  {item.text}
+                </p>
+              </article>
             ))}
           </div>
+        </div>
+      </section>
 
-          <div className="mt-8 text-center">
-            <Button asChild variant="outline">
-              <Link href="/om-oss">
-                Les mer om oss
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
-            </Button>
+      {/* Gruppemedlemmer */}
+      <section className="border-t border-border bg-card px-5 py-[76px]">
+        <div className="mx-auto max-w-[1180px]">
+          <div className="mb-10 flex flex-wrap items-end justify-between gap-4">
+            <div>
+              <div className="mb-[18px] h-[5px] w-[46px] bg-brand-blue" />
+              <h2 className="mb-2.5 font-display text-[clamp(32px,4.4vw,46px)] font-extrabold uppercase leading-none text-foreground">
+                Gruppemedlemmer
+              </h2>
+              <p className="text-[17px] text-muted-foreground">
+                TechSquad består av fire studenter fra IT-studiet ved UiA.
+              </p>
+            </div>
+            <Link
+              href="/om-oss"
+              className="inline-flex items-center gap-2.5 border-2 border-brand-blue px-5 py-3 font-display text-[17px] font-bold uppercase tracking-[0.1em] text-brand-blue no-underline transition-colors hover:bg-brand-blue hover:text-white hover:no-underline"
+            >
+              Les mer om oss <span>→</span>
+            </Link>
+          </div>
+
+          <div className="grid grid-cols-[repeat(auto-fit,minmax(210px,1fr))] gap-[18px]">
+            {teamMembers.map((member) => (
+              <article
+                key={member.name}
+                className="border border-border bg-background"
+              >
+                <div className="relative aspect-[3/4] overflow-hidden bg-brand-ink">
+                  {member.image ? (
+                    <Image
+                      src={member.image}
+                      alt={`Bilde av ${member.name}`}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 25vw"
+                      className="object-cover"
+                    />
+                  ) : (
+                    <div className="absolute inset-0 grid place-items-center font-display text-[56px] font-extrabold text-brand-yellow/90">
+                      {member.initials}
+                    </div>
+                  )}
+                  <div className="absolute bottom-0 left-0 bg-brand-ink px-2.5 py-[5px] text-[11px] font-bold uppercase tracking-[0.14em] text-brand-yellow">
+                    {member.role}
+                  </div>
+                </div>
+                <div className="px-4 pb-[18px] pt-3.5">
+                  <div className="font-display text-[21px] font-bold uppercase leading-[1.05] text-foreground">
+                    {member.name}
+                  </div>
+                </div>
+              </article>
+            ))}
           </div>
         </div>
       </section>
