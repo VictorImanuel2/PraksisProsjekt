@@ -1,6 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import { teamMembers } from "@/lib/team"
+import { asset } from "@/lib/base-path"
 
 const stats = [
   { value: "04", label: "Gruppemedlemmer" },
@@ -149,7 +150,7 @@ export default function HomePage() {
                 <div className="relative aspect-[3/4] overflow-hidden bg-brand-ink">
                   {member.image ? (
                     <Image
-                      src={member.image}
+                      src={asset(member.image)}
                       alt={`Bilde av ${member.name}`}
                       fill
                       sizes="(max-width: 768px) 100vw, 25vw"

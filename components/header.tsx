@@ -5,6 +5,7 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { useState } from "react"
 import { cn } from "@/lib/utils"
+import { asset } from "@/lib/base-path"
 
 export const navLinks = [
   { href: "/", label: "Hjem" },
@@ -26,7 +27,7 @@ export function Header() {
         <Link href="/" className="flex items-center gap-3 no-underline">
           <span className="grid place-items-center border border-black/10 bg-white p-1">
             <Image
-              src="/images/start-logo.png"
+              src={asset("/images/start-logo.png")}
               alt="Start"
               width={40}
               height={40}

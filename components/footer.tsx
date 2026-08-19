@@ -1,5 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
+import { asset } from "@/lib/base-path"
 
 const footerLinks = [
   { href: "/", label: "Hjem" },
@@ -13,7 +14,7 @@ export function Footer() {
       <div className="mx-auto flex max-w-[1180px] flex-wrap items-start justify-between gap-6">
         <div className="flex items-center gap-3">
           <Image
-            src="/images/start-logo.png"
+            src={asset("/images/start-logo.png")}
             alt="Start"
             width={38}
             height={38}
