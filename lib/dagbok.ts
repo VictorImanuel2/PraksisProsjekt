@@ -13,7 +13,7 @@ export const dagbokEntries: DagbokEntry[] = [
   },
   {
     week: "Uke 34",
-    title: "Andre møte med bedriften",
-    body: "Andre møte med bedriften. Fortsatt litt uklart hva oppgaven blir. Fullfører arbeidet på nettsiden til IS-302.",
+    title: "Prosjektet er i gang",
+    body: "Andre møte med bedriften. Oppgaven var fortsatt litt uklar i starten av uken, men vi kom skikkelig i gang mot slutten. Vi satte opp prosjektet i Visual Studio Code med MVC-struktur, og fikk laget navigasjonskart og wireframes. Nettsiden til IS-302 ble også ferdigstilt.",
   },
 ]
