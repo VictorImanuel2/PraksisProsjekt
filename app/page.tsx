@@ -45,19 +45,27 @@ export default function HomePage() {
             IS-302 Praksisprosjekt <span className="opacity-50">|</span> Høst 2026
           </p>
           <h1 className="font-display text-[clamp(52px,9vw,116px)] font-extrabold uppercase leading-[0.92] tracking-[-0.01em] text-brand-ink text-balance">
-            Vi er <span className="text-brand-blue">TechSquad</span>
+            Start<span className="text-brand-blue">Compass</span>
           </h1>
           <p className="max-w-[620px] text-[19px] leading-relaxed text-black/70 text-pretty">
-            Fire studenter fra Universitetet i Agder som er klare for vårt IS-302
-            praksisprosjekt høsten 2026. Vi ser frem til å anvende vår kunnskap i
-            praksis og samarbeide med næringslivet.
+            En digital trenerhub for utviklingsavdelingen i IK Start. Spillere og
+            foresatte vurderer de fem C-ene hver uke, og systemet viser avviket
+            mellom spillerens egen opplevelse og trenerens forventning.
           </p>
-          <Link
-            href="/om-oss"
-            className="inline-flex items-center gap-3 bg-brand-ink px-[26px] py-4 font-display text-[19px] font-bold uppercase tracking-[0.1em] text-brand-yellow no-underline transition-colors hover:bg-brand-blue hover:text-brand-yellow hover:no-underline"
-          >
-            Møt teamet <span className="text-base">→</span>
-          </Link>
+          <div className="flex flex-wrap gap-3.5">
+            <Link
+              href="/oppgavebeskrivelse"
+              className="inline-flex items-center gap-3 bg-brand-ink px-[26px] py-4 font-display text-[19px] font-bold uppercase tracking-[0.1em] text-brand-yellow no-underline transition-colors hover:bg-brand-blue hover:text-brand-yellow hover:no-underline"
+            >
+              Om oppgaven <span className="text-base">→</span>
+            </Link>
+            <Link
+              href="/om-oss"
+              className="inline-flex items-center gap-3 border-2 border-brand-ink px-[26px] py-4 font-display text-[19px] font-bold uppercase tracking-[0.1em] text-brand-ink no-underline transition-colors hover:bg-brand-ink hover:text-brand-yellow hover:no-underline"
+            >
+              Møt teamet
+            </Link>
+          </div>
         </div>
       </section>
 

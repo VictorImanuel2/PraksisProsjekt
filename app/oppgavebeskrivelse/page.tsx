@@ -6,7 +6,7 @@ export default function OppgavebeskrivelsePage() {
     <div>
       <PageHero
         title="Oppgavebeskrivelse"
-        lead="Vi skal utvikle en digital trenerhub for utviklingsavdelingen i IK Start, som samler oversikten over spillere og lag og automatiserer den ukentlige sporingen av de fem C-ene."
+        lead="StartCompass er en digital trenerhub for utviklingsavdelingen i IK Start, som samler oversikten over spillere og lag og automatiserer den ukentlige sporingen av de fem C-ene."
       />
 
       {/* Oppdraget */}
